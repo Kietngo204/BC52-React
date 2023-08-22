@@ -1,4 +1,6 @@
 /* eslint-disable no-unused-vars */
+import Ref from "./10_Ref/Ref";
+import CustomHooks from "./11_CustomHooks/CustomHooks";
 import Welcome from "./1_Components/Welcome";
 import Profile from "./2_JSX/Profile";
 import Events from "./3_Events/Events";
@@ -35,6 +37,8 @@ function App() {
     // <State />
     // <Form />
     // <Effect />
+    // <Ref />
+    <CustomHooks />
 
     // Bài tập
 
@@ -42,8 +46,8 @@ function App() {
     // <Shop />
     // <ShoeShop />
     // <StateCar />
-    <Shopping />
-    // <UserManagement />
+    // <Shopping />
+    // <UserManagement /> // làm phần gõ setTimeout
   );
 }
 

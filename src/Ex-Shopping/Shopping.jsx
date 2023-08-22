@@ -17,6 +17,8 @@ export default function Shopping() {
   const totalProduct = carts.reduce((result, item) => {
     return result + item.quantity;
   }, 0);
+
+  // hàm thêm sản phẩm vào giở hàng, tăng số lượng sản phẩm nếu sản phẩm đã tồn tại trong giỏ hàng
   const handleAddToCart = (product) => {
     // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng hay chưa
     const found = carts.find((item) => item.id === product.id);
@@ -34,9 +36,13 @@ export default function Shopping() {
       setCarts([...carts, { ...product, quantity: 1 }]);
     }
   };
+
+  // hàm đóng thẻ modal
   const handleCloseCart = () => {
     setIsOpen(false);
   };
+
+  // hàm xoá sản phẩm trong giỏ hàng
   const handleDeleteProductFromCart = (productID) => {
     const newCarts = carts.filter((item) => item.id !== productID);
     setCarts(newCarts);
